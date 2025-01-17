@@ -1,0 +1,103 @@
+@use 'base/mixins' as m;
+
+.club {
+    margin-bottom: 1.5rem;
+    .contenido-club {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 0;
+        }
+        @include m.tablet{
+            @include m.grid(2,4rem)
+        }
+    }
+
+    button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        max-width: 22rem;
+        padding: 1rem 0;
+        font-size: .9rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-color: bisque;
+        border: 2px solid black;
+        border-radius: 10px;
+
+        svg {
+            color: orange;
+        }
+
+        @include m.celular {
+            max-width: 30rem;
+            padding: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+        &:hover{
+            background-color: darken( bisque,20);
+        }
+    }
+}
+
+.contenido-dev {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 905px;
+
+    @include m.celular {
+        max-width: 505px;
+    }
+
+    .contenido-galeria {
+        display: flex;
+        flex-basis: calc(34% - 4rem);
+
+        img {
+            position: relative;
+            height: 2.9rem;
+            width: 2.9rem;
+            border-radius: 50%;
+
+            &:nth-child(2) {
+                left: -4px;
+            }
+
+            &:nth-child(3) {
+                left: -9px;
+            }
+
+            @include m.celular {
+                height: 3.9rem;
+                width: 3.9rem;
+            }
+        }
+    }
+
+    .contenido-joined {
+        display: flex;
+        flex-direction: column;
+        flex-basis: calc(66% - 4rem);
+
+        .contenido-star {
+            svg {
+                color: orange;
+                margin-right: 5px;
+                width: 1.1rem;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    }
+}

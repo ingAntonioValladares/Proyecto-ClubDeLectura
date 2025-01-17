@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+@mixin contenedor{
+    width: 98%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+@mixin border_radius_img {
+    border-radius: 15px;
+}
+@mixin tablet{
+    @media (min-width:v.$tablet){
+        @content;
+    }
+}
+@mixin celular{
+    @media (min-width:v.$celular){
+        @content;
+    }
+}
+@mixin grid($columnas:1,$gap:2){
+    display: grid;
+    grid-template-columns: repeat($columnas,1fr);
+    gap: $gap;
+}

@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    .contenido-header{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        svg{
+            max-height: 5rem;
+            max-width: 5rem;
+            color: orange;
+        }
+    }
+}

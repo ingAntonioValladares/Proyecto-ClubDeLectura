@@ -1,0 +1,100 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.ruta {
+    @include m.contenedor;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    .contenido-ruta {
+        svg {
+            max-height: 5rem;
+            max-width: 5rem;
+            color: orange;
+        }
+
+        @include m.tablet {
+            align-self: center;
+        }
+
+        svg:nth-of-type(1) {
+            position: relative;
+            left: 1rem;
+        }
+
+        svg:nth-of-type(2) {
+            position: relative;
+            left: 2rem;
+        }
+
+        svg:nth-of-type(3) {
+            position: relative;
+            left: 4rem;
+        }
+
+        @include m.celular {
+            svg:nth-of-type(1) {
+                position: relative;
+                left: 1rem;
+            }
+
+            li:nth-of-type(2) {
+                position: relative;
+                left: .2rem;
+            }
+
+            svg:nth-of-type(2) {
+                position: relative;
+                left: 1.5rem;
+            }
+
+            li:nth-of-type(3) {
+                position: relative;
+                left: .2rem;
+            }
+
+            svg:nth-of-type(3) {
+                position: relative;
+                left: 3.5rem;
+            }
+
+            li:nth-of-type(4) {
+                position: relative;
+                left: .2rem;
+            }
+        }
+
+        @include m.tablet {
+            svg:nth-of-type(1) {
+                position: relative;
+                left: 6rem;
+            }
+
+            li:nth-of-type(2) {
+                position: relative;
+                left: 4rem;
+            }
+
+            svg:nth-of-type(2) {
+                position: relative;
+                left: 10rem;
+            }
+
+            li:nth-of-type(3) {
+                position: relative;
+                left: 9rem;
+            }
+
+            svg:nth-of-type(3) {
+                position: relative;
+                left: 16rem;
+            }
+
+            li:nth-of-type(4) {
+                position: relative;
+                left: 15rem;
+            }
+        }
+    }
+}
